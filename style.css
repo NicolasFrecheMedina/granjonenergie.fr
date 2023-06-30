@@ -8,7 +8,7 @@
 
 .container{
     /* background-color: red; */
-    background-image:url("./img/PAGE_SITE_WEB_GEOF.png");
+    background-image:url("./PAGE_SITE_WEB_GEOF.png");
 /*     background-image:url("./img/Copie_site_web_geof.png"); */
     /* background-image:url("./img/LOGO_GEOF-2-1.png"); */
     /* width:100%; */
@@ -28,7 +28,7 @@
 }
 @media screen and (max-width: 850px) {
   .container{
-    background-image:url("./img/PAGE_SITE_MOBILE_GEOF.png");
+    background-image:url("./PAGE_SITE_MOBILE_GEOF.png");
     /* background-size:cover; */
     background-repeat: no-repeat;
     display: flex;
