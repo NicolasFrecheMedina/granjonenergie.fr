@@ -6,7 +6,7 @@
   } */
   
 
-body{
+.container{
     /* background-color: red; */
     background-image:url("./img/PAGE_SITE_WEB_GEOF.png");
 /*     background-image:url("./img/Copie_site_web_geof.png"); */
@@ -14,6 +14,22 @@ body{
     /* width:100%; */
     /* height: 600px; */
     background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  
+}
+@media screen and (max-width: 850px) {
+  .container{
+    background-image:url("./img/PAGE_SITE_MOBILE_GEOF.png");
+    /* background-size:cover; */
     background-repeat: no-repeat;
     display: flex;
 
@@ -25,5 +41,7 @@ body{
     align-items: center;
     text-align: center;
     color: #fff;
-  
+    background-size: 100%;
+
+  } 
 }
