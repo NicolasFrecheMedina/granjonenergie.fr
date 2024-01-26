@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    height: 5000px;
+    height: 10000px;
     top: 0px;
     left: 0px;
     display: flex;
@@ -75,7 +75,7 @@ body {
 
 .home-menu-section > li {
   list-style-type: none;
-  margin: 0px 20px;
+  margin: 0px 20px 60px 20px;
   
 }
 
@@ -102,7 +102,7 @@ body {
   justify-content: center;
 }
 
-#home-logo{
+#logo-home{
   width: 250px;
   height: 250px;
   background-image:url("./img/logo_GRANJON_ENERGIE-removebg-preview-small.png");
@@ -192,7 +192,36 @@ h1{
 /* End Button */
 
 /* End Home */
-      
+/* Start intro */ 
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+} 
+
+.accreditation{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.accreditation-2{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.accreditation-container{
+  max-width: 260px;
+  height: 150px;
+  opacity:0.6;
+
+}
+/* End intro */    
 /* Start Services */
 .services{
   width: 100%;
