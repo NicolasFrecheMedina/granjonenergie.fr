@@ -47,10 +47,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </div>
             </nav>
-            <!-- <div class="home-logo-container">
-                <div id="logo-home"></div>
-                <div id="logo-text-home">ÉNERGIE</div>
-            </div> -->
             <h3>Chauffez responsable, vivez confortable, optez pour notre expertise</h3>
             <div>
                 <button class="btn-home"><a href="tel:0679188718">06.79.18.87.18</a></button>
@@ -266,7 +262,7 @@
             <div class="container-reviews">
                 <div class="info-card">VOTRE AVIS COMPTE POUR NOUS</div>
 
-                <div class="slideshow-container">               
+                <div class="slideshow-container">
                     <div class="mySlides">
                         <p class="author">Stéphanie G.</p>
                         <q>
@@ -320,62 +316,87 @@
     </div>
     <div id="contact">
         <div class="filter-contact">
-            
+
             <div class="container-contact">
-                <div class="info-card">NOUS CONTACTER</div>
-                <form id="form" action="#" class="" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <div class="info-card">CONTACTEZ NOUS</div>
+                <form id="form"  class="" method="POST" netlify-honeypot="bot-field" netlify>
                     <div class="form-part">
                         <div>
                             <label for="name">Nom*</label>
-                            <input id="name" name="name" type="text"/>
+                            <input id="name" name="name" type="text" required/>
                             <input name="bot-field" style="display: none;" /></label>
                         </div>
                         <div>
-                            <label for="suname">Prénom</label>
+                            <label for="surname">Prénom</label>
                             <input id="surname" name="surname" type="text" />
                         </div>
                     </div>
                     <div class="form-part">
                         <div>
-                            <label for="name">Email*</label>
-                            <input id="email" type="email" name="email" />
+                            <label for="email">Email*</label>
+                            <input id="email" type="email" name="email" required/>
                         </div>
                         <div>
-                            <label for="name">Téléphone</label>
-                            <input id="phone" type="phone" name="phone"/>
-                        </div>  
+                            <label for="phone">Téléphone</label>
+                            <input id="phone" type="phone" name="phone" />
+                        </div>
                     </div>
                     <div class="form-part">
                         <div>
-                            <label for="message">Message*</label>
-                            <textarea id="message" name="text" type="text" placeholder="écrivez votre message ici"></textarea>
+                            <label for="message" id="lab-mess">Message*</label>
+                            <textarea id="message" name="message" type="text"
+                                placeholder="écrivez votre message ici" required></textarea>
                         </div>
-                        
                     </div>
                     <div class="btn-submit">
-                        <input id="submit" type="submit" value="ENVOYER" class="click"></input>
+                        <button class="btn-home" type="submit" ><a>ENVOYER</a></button>
                     </div>
-                    
                 </form>
             </div>
-            
-           
-
         </div>
-        
+
     </div>
-    <div id="insta">
+
+
+    <!-- <div id="insta">
         <div class="info-card">SUIVEZ-NOUS</div>
         Feed Insta
-    </div>
-    <div>
-        Footer
+    </div> -->
+
+    <div class="footer">
+        <div class="container-footer-1">
+            <div class="footer-h1">Informations de contact</div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/GranjonEnergie/" target="blank">FB</a>
+                <a href="https://www.instagram.com/granjon_energie/" target="blank">INSTA</a>
+            </div>
+        </div>
+        <div class="container-footer-2">
+            <div>
+                <div class="footer-h2">Numéro</div>
+                <div><a href="tel:0679188718" style="color: black;">06.79.18.87.18</a></div>
+            </div>
+            <div>
+                <div class="footer-h2">Adresse email</div>
+                <a href="mailto:g.granjon@granjonenergie.com" style="color: black;">g.granjon@granjonenergie.com</a>
+            </div>
+            
+        </div>
+        <div class="container-footer-2">   
+            <div><a href="">Mentions légales</a></div>
+            <div><a href="">Politique de confidentialité</a></div>
+            <div><a href="">Conditions générales de vente</a></div>
+            <div><a href="">Votre avis compte pour nous</a></div>
+        </div>
+        <div>
+            <div class="footer-logo-container">
+                <div id="footer-logo"></div>
+                <div id="footer-logo-text">ÉNERGIE</div>
+            </div>
+        </div>
     </div>
 
 </body>
 
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script> -->
 <script src="demo.js"></script>
-
 </html>

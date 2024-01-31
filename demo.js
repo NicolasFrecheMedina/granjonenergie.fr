@@ -13,17 +13,45 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex - 1].style.display = "block";
 }
-window.onload= function () {
- setInterval(function(){ 
-     plusSlides(1);
- }, 5000);
- }
+window.onload = function () {
+  setInterval(function () {
+    plusSlides(1);
+  }, 5000);
+}
 
 // End Carousel
+
+// Form modal
+
+  const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      alert("Votre message a bien été envoyé, merci!");
+      
+      // Réinitialiser les champs du formulaire
+      myForm.reset();
+    })
+    .catch((error) => alert(error));
+};
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
+  // End modal
