@@ -42,7 +42,6 @@
                 </div>
                 <div class="home-menu-section">
                     <li><a href="#service">Services</a></li>
-                    <!-- <li><a href="#about">À propos</a></li> -->
                     <li><a href="#review">Avis</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
@@ -54,7 +53,46 @@
                         </div>
                     </li>
                 </div>
+            </nav>
+            <nav class="home-menu-container-burger">
+                <div class="home-menu-logo">
+                    <div id="logo-nav"></div>
+                    <div id="logo-text-nav">ÉNERGIE</div>
+                </div>
+                <div>
+                    <div id="burger-menu">
+                        <span></span>
+                    </div>
 
+                    <div id="menu">
+                        <div class="home-menu-section" id="close-menu">
+                            <li><a href="#service">Services</a></li>
+                            <li><a href="#review">Avis</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li>
+                                <div>
+                                    <a href="https://www.facebook.com/GranjonEnergie/" target="blank"><i
+                                            class="fa fa-facebook fa-lg"></i></a>
+                                    <a href="https://www.instagram.com/granjon_energie/" target="blank"><i
+                                            class="fa fa-instagram fa-xl"></i></a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-menu-section" style="display: none;">
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#review">Avis</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <div>
+                            <a href="https://www.facebook.com/GranjonEnergie/" target="blank"><i
+                                    class="fa fa-facebook fa-lg"></i></a>
+                            <a href="https://www.instagram.com/granjon_energie/" target="blank"><i
+                                    class="fa fa-instagram fa-xl"></i></a>
+                        </div>
+                    </li>
+                </div>
             </nav>
             <h3>Chauffez responsable, vivez confortable, optez pour notre expertise</h3>
             <div>
@@ -142,7 +180,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-services">
+        <div class="container-services" id="display-revert">
             <div class="container-text-services">
                 <h2>Climatisation - Pompe à chaleur air-air réversibles</h2>
                 <div class="text-services">
@@ -176,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-services">
+        <div class="container-services" id="display-revert">
             <div class="container-text-services">
                 <h2>Chauffe-eau thermodynamique</h2>
                 <div class="text-services">
@@ -217,7 +255,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-services">
+        <div class="container-services" id="display-revert">
             <div class="container-text-services">
                 <h2>Contrats d'entretien</h2>
                 <div class="text-services">
@@ -238,9 +276,7 @@
                 <img src="./img/s6.jpeg" alt="">
             </div>
         </div>
-
     </div>
-
     <div id="reviews">
         <div class="filter-reviews">
             <div class="container-reviews">
@@ -353,7 +389,7 @@
                             <input id="phone" type="phone" name="phone" />
                         </div>
                     </div>
-                    <div class="form-part">
+                    <div class="form-part" id="responsive-textarea">
                         <div>
                             <label for="message" id="lab-mess">Message*</label>
                             <textarea id="message" name="message" type="text" placeholder="écrivez votre message ici"
@@ -366,39 +402,18 @@
                 </form>
             </div>
         </div>
-
     </div>
-
-    <!-- 
-    <div id="insta">
-        <div class="info-card">SUIVEZ-NOUS</div>
-        
-
-        <div id="instagram-feed">Chargement...</div>
-
-        <script>
-            // JavaScript pour récupérer et afficher le flux Instagram
-            fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=IGQWRPZAGVtSHg4M1FTaGdPMEQ3blZAXVFRtTkotbVRGTG9uX2NyQnNqSG1yLUctR3RrV1J2U2dHRXR3YUNCYllpZA1hqVnBnWHpfNFNsM1ZATTGRvV2RCTGhWQl9YY2lwZAFJEVmRhS25XTGJQUUhDU1JjMFdpN2lKd2sZD')
-                .then(response => response.json())
-                .then(data => {
-                    var htmlContent = '';
-                    data.data.forEach(post => {
-                        htmlContent += '<img src="' + post.images.standard_resolution.url + '" alt="' + post.caption.text + '">';
-                    });
-                    document.getElementById('instagram-feed').innerHTML = htmlContent;
-                });
-        </script>
-    </div> -->
-
     <div class="footer">
         <div class="container-footer-1">
             <div class="footer-h1">Informations de contact</div>
             <div class="footer-social">
                 <ul>
-                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-
+                    <li><a href="https://www.linkedin.com/in/geoffrey-granjon-2683297a/" target="blank"><i
+                                class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/GranjonEnergie/" target="blank"><i class="fab fa-facebook"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/granjon_energie/" target="blank"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -412,48 +427,69 @@
                 <a href="mailto:contact.granjon@granjonenergie.com"
                     style="color: black;">contact.granjon@granjonenergie.com</a>
             </div>
-
         </div>
         <div class="container-footer-2">
             <div><a href="#open-modal-ml">Mentions légales</a></div>
             <div id="open-modal-ml" class="modal-window">
                 <div>
                     <a href="#contact" title="Close" class="modal-close">Fermer</a>
-                    <h1>Mentions légales</h1>
+                    <h6>Mentions légales</h6>
                     <div class="text-modal">
-<br>Le site [NomDuSite].com est édité par [Nom de la SAS], Société par Actions Simplifiée au capital de [montant du capital] €, dont le siège social est situé à [adresse complète], inscrite au Registre du Commerce et des Sociétés de [Ville] sous le numéro [numéro d’inscription].
-<br><br>
-Numéro de TVA intracommunautaire : [numéro de TVA].
-<br><br>
-Directeur de la publication : [Nom du directeur], Président de [Nom de la SAS].
-<br><br>
-Contact :
-<br><br>
-Téléphone : [numéro de téléphone]<br>
-E-mail : [adresse e-mail]<br>
-Adresse postale : [adresse postale]<br>
-Hébergement du site : [Nom de l'hébergeur], [adresse complète de l’hébergeur], [pays de l’hébergeur].
-<br><br>
-Développement du site :<br><br>
-Le développement du site [NomDuSite].com a été réalisé par [Nom du Développeur ou de la Société du Développeur], un développeur indépendant. Pour toute question technique concernant ce site web, veuillez vous adresser directement à [adresse e-mail du développeur ou numéro de téléphone].
-<br><br>
-Protection des données personnelles :<br><br>
-La société [Nom de la SAS] s'engage à préserver la confidentialité des informations fournies en ligne par l'internaute. Toute information personnelle que l'internaute serait amené à transmettre à [Nom de la SAS] pour l'utilisation de certains services est soumise aux dispositions de la Loi n° 78-17 Informatique et Libertés du 6 janvier 1978 modifiée. À ce titre, l'internaute dispose d'un droit d'accès, de modification, de rectification et de suppression des informations le concernant. Il peut l'exercer à tout moment en adressant un e-mail à [adresse e-mail de la SAS], ou en envoyant un courrier à [adresse postale de la SAS].
-<br><br>
-Propriété intellectuelle :<br><br>
-L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques. La reproduction de tout ou partie de ce site sur un support électronique ou papier, quel qu'il soit, est formellement interdite sauf autorisation expresse du directeur de la publication.
-<br><br>
-Limitation de responsabilité :<br><br>
-[Nom de la SAS] s'efforce d’assurer au mieux de ses possibilités, l'exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de corriger, à tout moment et sans préavis, le contenu. Toutefois, [Nom de la SAS] ne peut garantir l'exactitude, la précision ou l’exhaustivité des informations mises à disposition sur ce site. En conséquence, [Nom de la SAS] décline toute responsabilité pour toute interruption du site, survenance de bogues, pour toute inexactitude ou omission portant sur des informations disponibles sur le site, pour tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à disposition sur le site.                 
+                        <br>Le site [NomDuSite].com est édité par [Nom de la SAS], Société par Actions Simplifiée au
+                        capital de [montant du capital] €, dont le siège social est situé à [adresse complète], inscrite
+                        au Registre du Commerce et des Sociétés de [Ville] sous le numéro [numéro d’inscription].
+                        <br><br>
+                        Numéro de TVA intracommunautaire : [numéro de TVA].
+                        <br><br>
+                        Directeur de la publication : [Nom du directeur], Président de [Nom de la SAS].
+                        <br><br>
+                        Contact :
+                        <br><br>
+                        Téléphone : [numéro de téléphone]<br>
+                        E-mail : [adresse e-mail]<br>
+                        Adresse postale : [adresse postale]<br>
+                        Hébergement du site : [Nom de l'hébergeur], [adresse complète de l’hébergeur], [pays de
+                        l’hébergeur].
+                        <br><br>
+                        Développement du site :<br><br>
+                        Le développement du site [NomDuSite].com a été réalisé par [Nom du Développeur ou de la Société
+                        du Développeur], un développeur indépendant. Pour toute question technique concernant ce site
+                        web, veuillez vous adresser directement à [adresse e-mail du développeur ou numéro de
+                        téléphone].
+                        <br><br>
+                        Protection des données personnelles :<br><br>
+                        La société [Nom de la SAS] s'engage à préserver la confidentialité des informations fournies en
+                        ligne par l'internaute. Toute information personnelle que l'internaute serait amené à
+                        transmettre à [Nom de la SAS] pour l'utilisation de certains services est soumise aux
+                        dispositions de la Loi n° 78-17 Informatique et Libertés du 6 janvier 1978 modifiée. À ce titre,
+                        l'internaute dispose d'un droit d'accès, de modification, de rectification et de suppression des
+                        informations le concernant. Il peut l'exercer à tout moment en adressant un e-mail à [adresse
+                        e-mail de la SAS], ou en envoyant un courrier à [adresse postale de la SAS].
+                        <br><br>
+                        Propriété intellectuelle :<br><br>
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur
+                        et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour
+                        les documents téléchargeables et les représentations iconographiques et photographiques. La
+                        reproduction de tout ou partie de ce site sur un support électronique ou papier, quel qu'il
+                        soit, est formellement interdite sauf autorisation expresse du directeur de la publication.
+                        <br><br>
+                        Limitation de responsabilité :<br><br>
+                        [Nom de la SAS] s'efforce d’assurer au mieux de ses possibilités, l'exactitude et la mise à jour
+                        des informations diffusées sur ce site, dont elle se réserve le droit de corriger, à tout moment
+                        et sans préavis, le contenu. Toutefois, [Nom de la SAS] ne peut garantir l'exactitude, la
+                        précision ou l’exhaustivité des informations mises à disposition sur ce site. En conséquence,
+                        [Nom de la SAS] décline toute responsabilité pour toute interruption du site, survenance de
+                        bogues, pour toute inexactitude ou omission portant sur des informations disponibles sur le
+                        site, pour tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une
+                        modification des informations mises à disposition sur le site.
                     </div>
                 </div>
             </div>
-
             <div><a href="#open-modal-pc">Politique de confidentialité</a></div>
             <div id="open-modal-pc" class="modal-window">
                 <div>
                     <a href="#contact" title="Close" class="modal-close">Fermer</a>
-                    <h1>Politique de confidentialité</h1>
+                    <h6>Politique de confidentialité</h6>
 
                     <div class="text-modal">
                         <br>PROTECTION DES DONNEES PERSONNELLES <br><br>
@@ -508,7 +544,6 @@ Limitation de responsabilité :<br><br>
                     </div>
                 </div>
             </div>
-
             <div><a href="#open-modal-cgv">Conditions générales de vente</a></div>
             <div id="open-modal-cgv" class="modal-window">
                 <div>
@@ -983,7 +1018,6 @@ Limitation de responsabilité :<br><br>
                     </div>
                 </div>
             </div>
-
             <div><a target="blank" href="https://g.page/r/CRZK1yCgo6sxEAI/review">Votre avis compte pour nous</a></div>
         </div>
         <div>

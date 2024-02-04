@@ -1,15 +1,13 @@
 // Start Carousel
+
 var slideIndex = 1;
 showSlides(slideIndex);
-
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -28,11 +26,10 @@ window.onload = function () {
 
 // End Carousel
 
-// Form modal
+// Start modal
 
-  const handleSubmit = (event) => {
+const handleSubmit = (event) => {
   event.preventDefault();
-
   const myForm = event.target;
   const formData = new FormData(myForm);
 
@@ -43,8 +40,6 @@ window.onload = function () {
   })
     .then(() => {
       alert("Votre message a bien été envoyé, merci!");
-      
-      // Réinitialiser les champs du formulaire
       myForm.reset();
     })
     .catch((error) => alert(error));
@@ -54,4 +49,26 @@ document
   .querySelector("form")
   .addEventListener("submit", handleSubmit);
 
-  // End modal
+// End modal
+
+// Can I have some burger
+
+var burgerMenu = document.getElementById('burger-menu');
+var overlay = document.getElementById('menu');
+var menuItems = document.querySelectorAll('#close-menu li');
+
+burgerMenu.addEventListener('click', function () {
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    if (burgerMenu.classList.contains("close")) {
+      burgerMenu.classList.remove("close");
+      overlay.classList.remove("overlay");
+    }
+  });
+});
+
+// End burger

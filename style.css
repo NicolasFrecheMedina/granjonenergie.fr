@@ -13,6 +13,7 @@ body {
   }
 /* Start Home */
 
+/* banner obs */
 .top-banner{
   height: 30px;
   background-color: #17161A;
@@ -58,6 +59,8 @@ body {
   color: #C7AB7C;
 }
 
+/* banner obs */
+
 .home{
   background-image:url("./img/accueil_climatisation_genergie.jpeg");
   background-size:cover;
@@ -95,8 +98,12 @@ body {
   background-color: #17161aa4;
   height: 40px;
   z-index: 1000;
-  
 }
+
+.home-menu-container-burger{
+  display: none;
+}
+
 .home-menu-logo{
   width: 80px;
   height: 80px;
@@ -147,20 +154,67 @@ body {
 
 .home-menu-section > li > a:hover {
   text-decoration: underline;
+  color: #C7AB7C
 }
 
 /* End Menu */
 
 h3{
-  color: #D5C1B4;
-  margin-top: 120px;
+  color: #C7AB7C;
   font-size: 50px;
   width: 80%;
   align-self: center;
   cursor: default;
+  animation: lights 5s 750ms linear infinite;
 }
 
-/* Start Button */
+@keyframes lights {
+  0% {
+    color: #C7AB7C;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 99%, 0.2),
+      0 0 0.125em hsla(0, 0%, 91%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: #C7AB7C;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 86%, 0.5),
+      0 0 0.125em hsla(0, 0%, 100%, 0.5),
+      -0.5em -0.125em 0.25em hsla(0, 0%, 100%, 0.2),
+      0.5em 0.125em 0.25em hsla(0, 0%, 100%, 0.4);
+  }
+  
+  40% { 
+    color: #C7AB7C;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 5%, 0.5),
+      0 0 0.125em hsla(51, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(0, 0%, 89%, 0.2),
+      0.25em 0.125em 0.125em hsla(0, 0%, 45%, 0.4);
+  }
+  
+  70% {
+    color: #C7AB7C;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 100%, 0.5),
+      0 0 0.125em hsla(0, 0%, 0%, 0.5),
+      0.5em -0.125em 0.25em hsla(0, 0%, 100%, 0.2),
+      -0.5em 0.125em 0.25em hsla(0, 0%, 97%, 0.4);
+  }
+  
+  100% {
+    color: #C7AB7C;
+    text-shadow:
+      0 0 1em hsla(0, 0%, 100%, 0.2),
+      0 0 0.125em hsla(49, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
 
 .btn-home {
   position: relative;
@@ -219,8 +273,6 @@ h3{
   transform: skewX(40deg) translateX(200%);
 }
 
-/* End Button */
-
 /* End Home */
 
 /* Start intro */ 
@@ -246,7 +298,6 @@ h3{
   align-self: flex-start;
   margin-bottom: 30px;
   background: linear-gradient(60deg, #8029a2, #b700ff);
-  position: sticky;
   top: 100px
 }
 
@@ -340,13 +391,11 @@ h1{
   margin: 30px 0px;
   background: linear-gradient(60deg, #29a243, #00ff15);
   align-self: flex-start;
-  position: sticky;
   top: 100px
 }
 
 .container-services{
   display: flex;
-  align-items: self-start;
   width: 100%;
 }
 
@@ -419,7 +468,6 @@ h2{
   align-self: flex-start;
   background: linear-gradient(60deg, #646464, #b1b1b1);
   margin: 30px 0px;
-  position: sticky;
   top: 100px
 }
 
@@ -507,7 +555,6 @@ h5{
   align-self: flex-start;
   background: linear-gradient(60deg, #a25529, #ff7b00);
   margin: 30px 0px;
-  position: sticky;
   top: 100px;
   z-index: 999;
 }
@@ -515,8 +562,6 @@ h5{
 span{
   color: #a25529;
 }
-
-/* Start Carousel */
 
 .slideshow-container {
   position: relative;
@@ -535,7 +580,6 @@ span{
 
 .mySlides {
   display: none;
-  /* padding-top: 5px; */
   text-align: center;
   font-size:large;
 }
@@ -547,7 +591,6 @@ span{
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  /* color: #888; */
   color: darkolivegreen;
   font-weight: bold;
   font-size: 40px;
@@ -568,7 +611,6 @@ span{
 
 q {
   font-style: italic;
-  text-align: right;
   color: #17161A;
 }
 
@@ -587,7 +629,6 @@ q {
 .container-reviews-btn{
   margin-bottom: 20px;
 }
-/* End Carousel */
 
 /* End Reviews */
 
@@ -701,8 +742,6 @@ textarea:focus {
 
 /* Start Footer */
 
-/* Start Logo */
-
 .footer{
   display: flex;
   justify-content: space-around;
@@ -796,7 +835,7 @@ ul li:nth-child(1) a:hover .fab {
 }
 
 .footer a{
-  color:#33a2299a;
+  color:#17161A;
 }
 
 .footer a:hover{
@@ -888,9 +927,6 @@ small {
   color: lightgray;
 }
 
-
-/* Mentions legales */
-
 .footer-logo-container {
   display: flex;
   flex-direction: column;
@@ -928,29 +964,328 @@ small {
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: black; 
 }
 
 /* End Footer */
 
-@media screen and (max-width: 850px) {
-  .home{
-    background-image:url("./img/accueil_climatisation_genergie.jpeg");
-    /* background-size:cover; */
-    background-repeat: no-repeat;
-    display: flex;
+/* Responsive 1024px */
 
+@media screen and (max-width: 1024px) {
+  .home{   
+    height: 600px;   
+  }
+  .filter{
+    justify-content: space-evenly;
+  }
+  .home-menu-container{
+    display: none;
+  }
+  .home-menu-container-burger{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size:17px;
+    padding: 20px 0px 0px 0px;
+    background-color: #17161aa4;
+    height: 45px;
+    z-index: 1000;
+  }
+  .home-menu-logo{
+    margin-top: -20px;
+  }
+  #logo-nav{
+    width: 40px;
+    height: 40px;
+  }
+  #logo-text-nav{
+    font-size: 7px;
+    margin-top: -3px;
+  }
+  #burger{
+    position: absolute;
+    top: 25px;
+    right: 7px;
+  }
+  .home-menu-section{
+    flex-direction: column;
+    align-items: flex-end;
+    
+  }
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    overflow: visible;
+    position: relative;
+    z-index:2;
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: #C7AB7C;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span {
+    right: 14px;
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left:0;
+    transform: rotate(90deg);
+    opacity:0;
+    width:0;
+  }
+  #menu{
+    z-index:1;
+    min-width:100%;
+    min-height:100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    height:0;
+    visibility: hidden;
+    opacity: 0;
+    text-align:center;
+    padding-top:20px;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  #menu.overlay{
+    visibility: visible;
+    opacity: 1;
+    padding-top:100px;
+    background:#17161aa4;
+  }
+  
+  #menu a{
+    font-size: x-large;
+  }
+
+  
+  .home-menu-section > li {
+    list-style-type: none;
+    margin: 0px 21px 35px;
+    
+  }
+  
+  .home-menu-section > li > a {
+    cursor: pointer;
+    transition: font-weight 250ms ease-in-out;
+    font-family: Helvetica, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    }
+  
+ 
+
+
+  h3{
+    font-size: 30px;
+  }
+  .intro {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .container-intro-1{
+    flex-direction: column-reverse;
+    max-height: 100%;
+  }
+  .img-intro {
+    max-width: 100%;
+  }
+  #img-intro {
+    margin-left: 0px;
+    height: 100%;
+  }
+  .text-intro-1{
+    width: 100%;
+    margin-right: 0;
+  }
+  .container-intro-2{
+    flex-direction: column;
+  }
+  .img-intro-2 {
+    max-width: 100%;
+  }
+  #img-intro-2 {
+    margin-left: 0px;
+    height: 100%;
+  }
+  .text-intro-2{
+    width: 100%;
+    margin-right: 0;
+    margin: 25px 0px 0px 0px;  
+  }
+  .text-intro-2 > div {
+    margin: 0px 0px 20px 0px;
+  }
+  .services{
     margin: 0;
     width: 100%;
-    height: auto;
-    position: fixed;
+  }
+  #services .info-card{
+    margin: 30px 20px;
+  }
+  .container-services{
+    flex-direction: column;
+  }
+  #display-revert{
+    flex-direction: column-reverse;
+  }
+  .img-services{
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+  }
+  .img-services > img {
+    height: 200px;
+  }
+  .container-text-services{
+    width: 100%;
+  }
+  .text-services{
+    margin: 0px 20px 20px 20px;
+  }
+  .text-services{
+    margin: 0px 20px 20px 20px;
+  }
+  h2{
+    margin-top: -4px;
+  }
+  #about .info-card{
+    margin: 30px 20px;
+  }  
+  .about-container-1 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-container-2 {
+    flex-direction: column;
+  }
+  .text-about {
+    width: 90%;
+    text-align: left;
+  }
+  .area-about{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }  
+  .container-reviews {
+    width: 100%;
+  }  
+  .slideshow-container {
+    width:90%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .filter-reviews .info-card{
+    margin: 30px 20px;
+  }
+  .mySlides {
+    font-size:medium;
+    padding: 0 40px;
+  }
+  .prev, .next {
+    padding: 23px 5px;
+  }
+  .prev{
+    left: 0%;
+  }
+  .container-contact {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    background-size: 100%;
-
-  } 
+  }
+  .filter-contact .info-card{
+    margin: 30px 20px;
+  }    
+  .form-part{
+    flex-direction: column;
+  }
+  .form-part textarea{
+    width: 100%;
+    align-self: center;
+  }
+  #responsive-textarea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #responsive-textarea > div{
+    width: 100%;
+  }
+  .footer{
+    flex-direction: column;
+    height: 100%;
+  }
+  .container-footer-1{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .footer-h1{
+    margin: 20px 0px;
+  }
+  .container-footer-2{
+    margin: 0px 0px 10px 20px;
+    align-self: flex-start;
+    height: 150px;
+    
+  }
+  .container-footer-2 a{
+    color: #17161A;
+  }
+  .modal-window > div {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+    max-height: 80%;
+    text-align:left;
+  }
+  .footer-logo-container{
+    margin-bottom: 10px;
+  }
 }
