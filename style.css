@@ -13,20 +13,6 @@ body {
   }
 /* Start Home */
 
-/* banner obs */
-.top-banner{
-  height: 30px;
-  background-color: #17161A;
-  width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 12px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  top:0;
-}
-
 .icon-contact{
   cursor: pointer;
 }
@@ -63,7 +49,7 @@ body {
 
 .home{
   background-image:url("./img/accueil_climatisation_genergie.jpeg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   width: 100%;
@@ -389,7 +375,7 @@ h1{
   padding: 2px 4px;
   margin-left: 8%;
   margin: 30px 0px;
-  background: linear-gradient(60deg, #29a243, #00ff15);
+  background: linear-gradient(60deg, #2e521c, #488b1b);
   align-self: flex-start;
   top: 100px
 }
@@ -426,7 +412,7 @@ h1{
 }
 
 h2{
-  background: linear-gradient(60deg, #29a243, #00ff15);
+  background: linear-gradient(60deg, #2e521c, #488b1b);
   margin-top: 0px;
   padding: 20px 0px 20px 20px;
   color: white;
@@ -974,7 +960,10 @@ small {
 
 @media screen and (max-width: 1024px) {
   .home{   
-    height: 600px;   
+    height: 600px;
+    background-image: url(./img/accueil_climatisation_genergie_mobile.jpeg);  
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .filter{
     justify-content: space-evenly;
