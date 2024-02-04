@@ -1154,6 +1154,10 @@ small {
   .text-intro-2 > div {
     margin: 0px 0px 20px 0px;
   }
+  #accreditations {
+    margin: 30px 0px;
+    width: 90%;
+  }
   .services{
     margin: 0;
     width: 100%;
@@ -1202,10 +1206,11 @@ small {
     text-align: left;
   }
   .area-about{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    margin-left: 15px;
   }  
   .container-reviews {
     width: 100%;
