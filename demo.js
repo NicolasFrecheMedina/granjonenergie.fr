@@ -72,3 +72,24 @@ menuItems.forEach(function (menuItem) {
 });
 
 // End burger
+
+// Start Read More 
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.read-more-toggle').forEach(function(toggleDiv) {
+      toggleDiv.addEventListener('click', function() {
+          const content = this.previousElementSibling; // Sélectionne le contenu juste avant la div dans le même conteneur
+          content.classList.toggle('hide'); // Basculer la visibilité du contenu
+          
+          // Basculer le texte et l'icône de la div entre "Lire Plus" et "Lire Moins"
+          if (content.classList.contains('hide')) {
+              this.innerHTML = 'Lire Plus <i class="fa fa-chevron-down"></i>';
+          } else {
+              this.innerHTML = 'Lire Moins <i class="fa fa-chevron-up"></i>';
+          }
+      });
+  });
+});
+
+
+// End Read More 
