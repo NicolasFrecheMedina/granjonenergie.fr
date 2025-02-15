@@ -1,95 +1,110 @@
-// Start Carousel
-
 var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "block";
 }
-window.onload = function () {
-  setInterval(function () {
-    plusSlides(1);
-  }, 5000);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-// End Carousel
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// Start modal
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+// Attendre le chargement du DOM avant d'exécuter les scripts
+document.addEventListener("DOMContentLoaded", function () {
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => {
-      alert("Votre message a bien été envoyé, merci!");
-      myForm.reset();
-    })
-    .catch((error) => alert(error));
-};
+  // Start Carousel (Exécuté seulement si les slides existent)
+  var slides = document.getElementsByClassName("mySlides");
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+  if (slides.length > 0) {
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    setInterval(function () {
+      plusSlides(1);
+    }, 5000);
+  }
+  // End Carousel
 
-// End modal
+  // Start modal (S'exécute seulement si un formulaire est présent)
+  var form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(form);
 
-// Can I have some burger
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => {
+          alert("Votre message a bien été envoyé, merci!");
+          form.reset();
+        })
+        .catch((error) => alert(error));
+    });
+  }
+  // End modal
 
-var burgerMenu = document.getElementById('burger-menu');
-var overlay = document.getElementById('menu');
-var menuItems = document.querySelectorAll('#close-menu li');
+  // Start burger menu (Toujours actif si les éléments existent)
+  var burgerMenu = document.getElementById('burger-menu');
+  var overlay = document.getElementById('menu');
+  var menuItems = document.querySelectorAll('#close-menu li');
 
-burgerMenu.addEventListener('click', function () {
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
-});
+  if (burgerMenu && overlay) {
+    burgerMenu.addEventListener('click', function () {
+      this.classList.toggle("close");
+      overlay.classList.toggle("overlay");
+    });
 
-menuItems.forEach(function (menuItem) {
-  menuItem.addEventListener('click', function () {
-    if (burgerMenu.classList.contains("close")) {
-      burgerMenu.classList.remove("close");
-      overlay.classList.remove("overlay");
-    }
-  });
-});
-
-// End burger
-
-// Start Read More 
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.read-more-toggle').forEach(function(toggleDiv) {
-      toggleDiv.addEventListener('click', function() {
-          const content = this.previousElementSibling; // Sélectionne le contenu juste avant la div dans le même conteneur
-          content.classList.toggle('hide'); // Basculer la visibilité du contenu
-          
-          // Basculer le texte et l'icône de la div entre "Lire Plus" et "Lire Moins"
-          if (content.classList.contains('hide')) {
-              this.innerHTML = 'Lire Plus <i class="fa fa-chevron-down"></i>';
-          } else {
-              this.innerHTML = 'Lire Moins <i class="fa fa-chevron-up"></i>';
-          }
+    menuItems.forEach(function (menuItem) {
+      menuItem.addEventListener('click', function () {
+        if (burgerMenu.classList.contains("close")) {
+          burgerMenu.classList.remove("close");
+          overlay.classList.remove("overlay");
+        }
       });
-  });
+    });
+  }
+  // End burger menu
+
+  // Start Read More (Exécuté seulement si les éléments existent)
+  var readMoreToggles = document.querySelectorAll('.read-more-toggle');
+
+  if (readMoreToggles.length > 0) {
+    readMoreToggles.forEach(function (toggleDiv) {
+      toggleDiv.addEventListener('click', function () {
+        const content = this.previousElementSibling;
+        content.classList.toggle('hide');
+
+        this.innerHTML = content.classList.contains('hide')
+          ? 'Lire Plus <i class="fa fa-chevron-down"></i>'
+          : 'Lire Moins <i class="fa fa-chevron-up"></i>';
+      });
+    });
+  }
+  // End Read More
+
 });
 
+// Start réalisation
 
-// End Read More 
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".flip-card").forEach(card => {
+    card.addEventListener("click", function () {
+      this.classList.toggle("flipped");
+    });
+  });
+});
+// Start réalisation
